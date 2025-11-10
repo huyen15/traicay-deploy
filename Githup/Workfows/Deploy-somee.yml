@@ -1,0 +1,22 @@
+name: Deploy to Somee
+
+on:
+  push:
+    branches:
+      - main  # Trigger khi nhánh main thay đổi
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Upload to Somee via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ftp://your-site.somee.com
+        username: your_somee_username
+        password: ${{ secrets.SOMEE_FTP_PASSWORD }}
+        server-dir: /wwwrooactionstions

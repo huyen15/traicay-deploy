@@ -2,7 +2,7 @@ name: Deploy to Somee
 
 on:
   push:
-    branches:
+    branches: <!-- update -->)
       - main  # Tự chạy khi bạn cập nhật nhánh main
 
 jobs:

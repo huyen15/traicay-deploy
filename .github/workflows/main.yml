@@ -16,7 +16,7 @@ jobs:
     - name: Upload to Somee via FTP
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: ftp://155.254.244.28/www.traicay.somee.com
+        server: 155.254.244.28
         username: huyen156
         password: ${{ secrets.SOMEE_FTP_PASSWORD }}
         server-dir: /www.traicay.somee.com/wwwroot/
